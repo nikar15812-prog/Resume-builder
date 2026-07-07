@@ -1,0 +1,206 @@
+import React, { useState } from "react";
+import { Link, useNavigate } from 'react-router-dom';
+import "./Login.css";
+import loginImage from "../assets/login-image.png";
+import googleIcon from "../assets/google.png";
+import linkedinIcon from "../assets/linkedin.png";
+import { MdEmail } from "react-icons/md";
+import { FaEye, FaEyeSlash, FaPhoneAlt } from "react-icons/fa";
+import { IoChevronBack } from "react-icons/io5";
+
+const Login = () => {
+  const navigate = useNavigate();
+
+  // View States: 'default'
+  const [view, setView] = useState('default');
+
+  // Form Field States
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [phone, setPhone] = useState("");
+
+  // Error States
+  const [emailError, setEmailError] = useState("");   
+  const [passwordError, setPasswordError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  
+  const [showPassword, setShowPassword] = useState(false);
+
+  // Phone input handling (only numbers up to 10 digits)
+  const handlePhoneChange = (e) => {
+    const value = e.target.value;
+    const onlyNums = value.replace(/[^0-9]/g, '');
+    if (onlyNums.length <= 10) {
+      setPhone(onlyNums);
+      setPhoneError("");
+    }
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    setEmailError("");
+    setPasswordError("");
+
+    let valid = true;
+
+    // 1. Email Empty Check
+    if (email.trim() === "") {
+      setEmailError("Enter your email address");
+      valid = false;
+    }
+
+    // 2. Password Validation Rules
+    if (password.trim() === "") {
+      setPasswordError("Enter your password");
+      valid = false;
+    } else {
+      const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d{@$!%*?&}]{8,}$/;
+      
+      if (!passwordRegex.test(password)) {
+        setPasswordError("Password must be at least 8 characters long, include 1 uppercase letter, 1 number, and 1 special character.");
+        valid = false;
+      }
+    }
+
+    if (!valid) return;
+
+    navigate("/Resume-builder/login/emailverification");
+  };
+
+
+  return (
+    <div className="login-container">
+      {/* Left Section */}
+      <div className="left-section">
+        <div className="welcome-content">
+          <h1>Welcome back!</h1>
+          <p>
+            Access your account
+            <br />
+            and continue where
+            <br />
+            you left off.
+          </p>
+        </div>
+
+        <img src={loginImage} alt="Login" className="login-image" />
+      </div>
+
+      {/* Right Section */}
+      <div className="right-section">
+        <form className="login-form" onSubmit={handleLogin}>
+          
+          {/* Back button for OTP views */}
+          {view !== 'default' && (
+            <button
+              type="button"
+              className="back-to-login-btn"
+              onClick={() => {
+                setView('default');
+              }}
+            >
+              <IoChevronBack /> Back
+            </button>
+          )}
+
+          <h2>
+            {view === 'default' && (passwordError ? "Invalid Password Format" : "Login in to your account")}
+          </h2>
+
+          {/* VIEW 1: DEFAULT LOGIN */}
+          {view === 'default' && (
+            <>
+              {/* Email */}
+              <div className="input-group">
+                <label>Email Address</label>
+                <div className="input-box">
+                  {email === "" && <MdEmail className="input-icon" />}
+                  <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      setEmailError("");
+                    }}
+                    className={emailError ? "error-input" : ""}
+                  />
+                </div>
+                {emailError && <span className="error-text">{emailError}</span>}
+              </div>
+
+              {/* Password */}
+              <div className="input-group">
+                <label>Password</label>
+                <div className="password-box">
+                  {password === "" && (
+                    <span className="eye-left" onClick={() => setShowPassword(!showPassword)}>
+                      {showPassword ? <FaEyeSlash /> : <FaEye />}
+                    </span>
+                  )}
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Enter your password"
+                    value={password}
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                      setPasswordError("");
+                    }}
+                    className={passwordError ? "error-input" : ""}
+                  />
+                  {password !== "" && (
+                    <span className="eye-right" onClick={() => setShowPassword(!showPassword)}>
+                      {showPassword ? <FaEye /> : <FaEyeSlash />}
+                    </span>
+                  )}
+                </div>
+                {passwordError && <span className="error-text password-error-msg">{passwordError}</span>}
+              </div>
+
+              {/* Options & Remember me */}
+              <div className="options">
+                <div className="remember">
+                  <input type="checkbox" id="remember" />
+                  <label htmlFor="remember">Remember me</label>
+                </div>
+                <Link to="/Resume-builder/login/forgotpassword" className='forgot-password'>Forgot Password?</Link>
+              </div>
+
+              <button type="submit" className="continue-btn">Continue</button>
+            </>
+          )}
+
+
+          {/* Dynamic Footer / Alternate Login Methods */}
+          <div className="divider">
+            <span></span>
+            <p>OR</p>
+            <span></span>
+          </div>
+
+          <p className="continue-text">Or Continue with</p>
+
+          <div className="social-login">
+            {/* Default Social logins available only on default view */}
+            {view === 'default' && (
+              <>
+                <a href="https://accounts.google.com/" target="_blank" rel="noopener noreferrer">
+                  <img src={googleIcon} alt="Google" />
+                </a>
+                <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer">
+                  <img src={linkedinIcon} alt="LinkedIn" />
+                </a>
+              </>
+            )}
+          </div>
+
+          <p className="contact-admin">
+            Need help? <a href="#">Contact admin</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Login;
