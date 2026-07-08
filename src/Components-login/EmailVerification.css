@@ -29,7 +29,7 @@
 
 .em-login-illustration img {
   width: 480px;
-  height: 480px;
+  height:480px;
   object-fit: contain;
 }
 
@@ -151,46 +151,65 @@
 /* Tablet */
 @media (max-width: 992px) {
   .em-login-body {
-    gap: 30px;
-    padding: 25px 40px;
+    gap: 25px;
+    padding: 25px 30px;
   }
 
   .em-login-illustration {
-    flex: 0 0 420px;
-    width: 420px;
+    flex: 0 0 320px;
+    width: 320px;
   }
 
   .em-login-illustration img {
-    width: 420px;
-    height: 420px;
+    width: 320px;
+    height: 320px;
   }
 
   .em-otp-container {
-    margin-top: 0;
+    flex:0 0 340px;
+    width: 340px;
+    margin-top:0;
   }
 }
+/* Laptop / 1024px range fix */
+ @media (max-width: 1100px) {
+  .em-login-body { 
+   gap: 30px;
+  padding: 25px 40px;
+     }
+      .em-login-illustration { 
+        flex: 0 0 400px; 
+        width: 400px;
+       } 
+       .em-login-illustration img {
+         width: 400px; height: 400px;
+         }
+          .em-otp-container { 
+          flex: 0 0 380px; width: 380px;
+   margin-top: 0; 
+  } }
 
 /* Mobile */
 @media (max-width: 768px) {
   .em-login-body {
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
     padding: 20px;
+    height:auto;
+    min-height: 100vh;
+    justify-content: center;
   }
 
   .em-login-illustration {
-    width: 100%;
+    display:none;
   }
 
-  .em-login-illustration img {
-    width: 260px;
-    height: 260px;
-  }
 
   .em-otp-container {
     width: 100%;
     max-width: 400px;
     margin-top: 0;
+    
   }
 
   .em-back-container {
@@ -201,3 +220,19 @@
     height: 34px;
   }
 }
+  @media (max-width: 480px) { 
+  .em-otp-input-group {
+    gap: 6px; 
+    }
+  .em-otp-box {
+      width: 42px;
+      height: 42px;
+      font-size: 16px;
+       }
+      }
+  @media (max-width: 360px)
+   { 
+  .em-otp-input-group
+   {
+     gap: 5px; 
+   } };

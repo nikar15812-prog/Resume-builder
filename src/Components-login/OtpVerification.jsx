@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OtpVerification.css";
 import verified from "../assets/image 15.png";
-import lockImg from "../assets/images.png";
+
 
 const OtpVerification = () => {
   const navigate = useNavigate();
@@ -85,13 +85,10 @@ const OtpVerification = () => {
 
       {/* Right Section */}
       <div className="otp-right">
-        <div className="back-btn" onClick={() => navigate("/Ai-resume/login")} style={{ cursor: 'pointer' }}>
+        <div className="back-btn" onClick={() => navigate("/Ai-resume/login")} style={{ cursor: 'pointer'}} id="txtt">
           ← <span>Back to Login</span>
         </div>
 
-      <div className="lock-circle">
-      <img src={lockImg} alt="Lock" className="lockImg" />
-`         </div>
 
         <h4>The OTP you entered is incorrect</h4>
         <p>Please try again.</p>

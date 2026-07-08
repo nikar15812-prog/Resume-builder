@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./LoginSuccess.css";
 import { FaCheck, FaShieldAlt } from "react-icons/fa";
 import loginImage from "../assets/login-success.png";
-import securityImage from "../assets/security.png";
+import securityimg from "../assets/security.png";
 
 const LoginSuccess = () => {
   const [loginTime, setLoginTime] = useState("");
