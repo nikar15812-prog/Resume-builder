@@ -219,27 +219,209 @@
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 1024px) {
+/* ================= 2560px ================= */
+@media screen and (min-width: 2560px) {
+  .can-top-header {
+    min-height: 90px;
+    padding: 0 60px;
+  }
+
+  .can-dashboard-title-top {
+    font-size: 18px;
+    max-width: 250px;
+  }
+
   .can-search-wrapper {
-    width: 280px;
+    width: 600px;
+  }
+
+  .can-search-wrapper input {
+    height: 52px;
+    font-size: 18px;
+    padding-left: 50px;
+  }
+
+  .can-search-icon img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .can-user-profile {
+    gap: 24px;
+  }
+
+  .can-top-avatar {
+    width: 52px;
+    height: 52px;
+  }
+
+  .can-user-info h4 {
+    font-size: 18px;
+  }
+
+  .can-user-info p {
+    font-size: 14px;
+  }
+
+  .can-dropdown-arrow {
+    width: 18px;
+    height: 18px;
   }
 }
 
+/* ================= 1440px ================= */
+@media screen and (max-width: 1440px) {
+  .can-top-header {
+    padding: 0 22px;
+  }
+
+  .can-search-wrapper {
+    width: 340px;
+  }
+
+  .can-dashboard-title-top {
+    max-width: 170px;
+  }
+}
+
+/* ================= 1024px ================= */
+@media screen and (max-width: 1024px) {
+  .can-top-header {
+    padding: 0 18px;
+  }
+
+  .can-search-wrapper {
+    width: 280px;
+  }
+
+  .can-dashboard-title-top {
+    font-size: 12px;
+    max-width: 140px;
+  }
+
+  .can-user-profile {
+    gap: 12px;
+  }
+
+  .can-avatar-wrapper {
+    gap: 8px;
+  }
+}
+
+/* ================= 768px ================= */
 @media screen and (max-width: 768px) {
   .can-top-header {
-    padding: 8px 16px;
+    padding: 10px 16px;
     min-height: auto;
   }
 
   .can-header-left {
     align-items: center;
+    gap: 10px;
     padding-top: 0;
+  }
+
+  .can-mobile-toggle {
+    display: flex;
   }
 
   .can-search-wrapper {
     display: none;
   }
 
+  .can-user-info {
+    display: none;
+  }
+
+  .can-avatar-wrapper {
+    padding: 4px 8px;
+  }
+
+  .can-user-dropdown-menu {
+    right: -10px;
+  }
+}
+
+/* ================= 425px ================= */
+@media screen and (max-width: 425px) {
+  .can-top-header {
+    padding: 10px 12px;
+  }
+
+  .can-dashboard-title-top {
+    font-size: 11px;
+    max-width: 120px;
+  }
+
+  .can-user-profile {
+    gap: 8px;
+  }
+
+  .can-top-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .can-header-icon img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .can-dropdown-arrow {
+    width: 12px;
+    height: 12px;
+  }
+
+  .can-user-dropdown-menu {
+    min-width: 150px;
+  }
+}
+
+/* ================= 320px ================= */
+@media screen and (max-width: 320px) {
+  .can-top-header {
+    padding: 8px 10px;
+  }
+
+  .can-dashboard-title-top {
+    font-size: 10px;
+    max-width: 100px;
+  }
+
+  .can-mobile-toggle {
+    width: 20px;
+    height: 14px;
+  }
+
+  .can-user-profile {
+    gap: 6px;
+  }
+
+  .can-top-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .can-header-icon img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .can-dropdown-arrow {
+    width: 10px;
+    height: 10px;
+  }
+
+  .can-user-dropdown-menu {
+    min-width: 140px;
+    right: 0;
+  }
+
+  .can-dropdown-item {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+}
   .can-user-info {
     display: none;
   }
@@ -258,4 +440,3 @@
   .can-avatar-wrapper {
     padding: 4px 8px;
   }
-}   

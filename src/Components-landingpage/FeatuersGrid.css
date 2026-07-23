@@ -218,6 +218,72 @@
     font-size: 18px;
   }
 }
+@media (max-width: 1440px) {
+  .features-section,
+  .stats-wrapper-block {
+    max-width: 1400px;
+    padding: 10px 35px !important;
+  }
+
+  .features-inner-container,
+  .stats-row-container {
+    max-width: 1180px;
+  }
+
+  .features-grid-layout {
+    max-width: 1080px;
+    gap: 22px;
+  }
+
+  .feature-grid-card {
+    width: 300px !important;
+    height: 195px !important;
+  }
+
+  .section-main-title {
+    font-size: 22px;
+  }
+
+  .icon-box-wrapper {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .icon-box-wrapper img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .feature-grid-card h3 {
+    font-size: 15px;
+  }
+
+  .feature-grid-card p {
+    font-size: 12px;
+  }
+
+  .stats-row-container {
+    padding: 20px 40px !important;
+  }
+
+  .stat-icon-holder-circle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .stat-inline-img {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .stat-text-meta h3 {
+    font-size: 24px;
+  }
+
+  .stat-text-meta p {
+    font-size: 12px;
+  }
+}
 @media (max-width: 1024px) {
   .features-section,
   .stats-wrapper-block {

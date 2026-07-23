@@ -172,7 +172,109 @@ body {
 /* Text */
 
 
+@media (min-width: 2560px) {
+  .ls-success-card {
+    max-width: 1600px;
+    gap: 120px;
+  }
 
+  .ls-login-image {
+    max-width: 700px;
+  }
+
+  .ls-success-icon {
+    width: 120px;
+    height: 120px;
+    font-size: 60px;
+  }
+
+  .ls-content-section h1 {
+    font-size: 42px;
+  }
+
+  .ls-content-section h2 {
+    font-size: 24px;
+  }
+
+  .ls-subtitle {
+    font-size: 20px;
+  }
+
+  .ls-security-card {
+    max-width: 480px;
+    padding: 22px;
+  }
+}
+@media (max-width: 1440px) {
+  .ls-success-card {
+    max-width: 1100px;
+    gap: 50px;
+  }
+
+  .ls-login-image {
+    max-width: 500px;
+  }
+}
+@media (max-width: 1024px) {
+  .ls-success-container {
+    padding: 28px 24px;
+  }
+
+  .ls-success-card {
+    max-width: 900px;
+    gap: 40px;
+  }
+
+  .ls-login-image {
+    max-width: 420px;
+  }
+
+  .ls-success-icon {
+    width: 85px;
+    height: 85px;
+    font-size: 44px;
+  }
+
+  .ls-content-section h1 {
+    font-size: 28px;
+  }
+
+  .ls-content-section h2 {
+    font-size: 17px;
+  }
+
+  .ls-subtitle {
+    font-size: 15px;
+  }
+
+  .ls-security-card {
+    max-width: 360px;
+    padding: 15px;
+  }
+
+  .ls-security-icon-box {
+    width: 56px;
+    height: 56px;
+  }
+
+  .ls-security-image {
+    width: 44px;
+    height: 44px;
+  }
+
+  .ls-security-image-inner {
+    width: 22px;
+    height: 22px;
+  }
+
+  .ls-security-info h3 {
+    font-size: 17px;
+  }
+
+  .ls-security-info p {
+    font-size: 14px;
+  }
+}
 /* Tablet */
 
 @media (max-width: 900px) {
@@ -295,6 +397,59 @@ body {
     width: 38px;
     height: 38px;
   }
+  
+/* ================= 425px ================= */
+@media (max-width: 425px) {
+  .ls-success-container {
+    padding: 18px 14px;
+  }
+
+  .ls-success-icon {
+    width: 72px;
+    height: 72px;
+    font-size: 34px;
+  }
+
+  .ls-success-image {
+    width: 54px;
+    height: 54px;
+  }
+
+  .ls-content-section h1 {
+    font-size: 22px;
+  }
+
+  .ls-content-section h2 {
+    font-size: 16px;
+  }
+
+  .ls-subtitle {
+    font-size: 14px;
+  }
+
+  .ls-security-card {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .ls-security-icon-box {
+    width: 48px;
+    height: 48px;
+  }
+
+  .ls-security-image {
+    width: 38px;
+    height: 38px;
+  }
+
+  .ls-security-info h3 {
+    font-size: 16px;
+  }
+
+  .ls-security-info p {
+    font-size: 13px;
+  }
+}
   @media (max-width: 320px) {
   .ls-success-container {
     padding: 15px 10px;
