@@ -147,12 +147,81 @@
 .em-verify-btn:hover {
   opacity: 0.9;
 }
-
-/* Laptop / 1024px range fix */
-@media (max-width: 1100px) {
+/*media responsiveness*/
+@media (min-width: 2560px) {
   .em-login-body {
-    gap: 30px;
-    padding: 25px 40px;
+    max-width: 2200px;
+    padding: 60px 120px;
+    gap: 120px;
+  }
+
+  .em-login-illustration {
+    flex: 0 0 700px;
+    width: 700px;
+  }
+
+  .em-login-illustration img {
+    width: 700px;
+    height: 700px;
+  }
+
+  .em-otp-container {
+    flex: 0 0 650px;
+    width: 650px;
+  }
+
+  .em-otp-title {
+    font-size: 34px;
+  }
+
+  .em-otp-subtitle {
+    font-size: 18px;
+  }
+
+  .em-otp-box {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .em-verify-btn {
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .em-back-container span,
+  .em-resend-text {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1440px) {
+  .em-login-body {
+    max-width: 1400px;
+    padding: 40px 80px;
+    gap: 80px;
+  }
+
+  .em-login-illustration {
+    flex: 0 0 520px;
+    width: 520px;
+  }
+
+  .em-login-illustration img {
+    width: 520px;
+    height: 520px;
+  }
+
+  .em-otp-container {
+    flex: 0 0 460px;
+    width: 460px;
+  }
+}
+/* Laptop / 1024px range fix */
+@media (max-width: 1024px) {
+   .em-login-body {
+    max-width: 1000px;
+    padding: 30px 40px;
+    gap: 35px;
   }
 
   .em-login-illustration {
@@ -168,7 +237,6 @@
   .em-otp-container {
     flex: 0 0 380px;
     width: 380px;
-    margin-top: 0;
   }
 }
 
@@ -225,27 +293,66 @@
     height: 34px;
   }
 }
+@media (max-width: 425px) {
+  .em-login-body {
+    padding: 16px 14px;
+    padding-top: 35px;
+  }
 
-@media (max-width: 480px) {
+  .em-otp-title {
+    font-size: 17px;
+  }
+
   .em-otp-input-group {
-    gap: 6px;   /* 12px la irundhu kammi */
+    gap: 6px;
   }
 
   .em-otp-box {
-    width: 42px;   /* container ku match aaga adjust */
-    height: 42px;
-    font-size: 16px;
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 320px) {
+  .em-login-body {
+    padding: 15px 10px;
+    padding-top: 30px;
+  }
+
+  .em-back-container {
+    margin-bottom: 15px;
+  }
+
+  .em-back-container span {
+    font-size: 12px;
+  }
+
+  .em-otp-title {
+    font-size: 16px;
+  }
+
+  .em-otp-subtitle {
+    font-size: 11px;
+    margin-bottom: 15px;
+  }
+
   .em-otp-input-group {
-    gap: 5px;
+    gap: 4px;
   }
 
   .em-otp-box {
-    width: 36px;
-    height: 36px;
-    font-size: 15px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .em-resend-text {
+    font-size: 12px;
+  }
+
+  .em-verify-btn {
+    height: 42px;
+    font-size: 13px;
   }
 }

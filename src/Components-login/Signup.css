@@ -278,7 +278,88 @@
 .socialBtn:hover {
  transform: translateY(-2px);
 }
+@media (min-width: 2560px) {
+  .pageContainer {
+    max-width: 2200px;
+    margin: 0 auto;
+  }
 
+  .rightPanel {
+    padding: 80px;
+  }
+
+  .leftTextContainer h1 {
+    font-size: 72px;
+  }
+
+  .leftTextContainer p {
+    font-size: 34px;
+    line-height: 1.5;
+  }
+
+  .formContainer {
+    max-width: 700px;
+  }
+
+  .formTitle {
+    font-size: 42px;
+  }
+
+  .fieldLabel,
+  .continue-text {
+    font-size: 20px;
+  }
+
+  .inputField,
+  .phoneInput,
+  .countrySelector,
+  .submitBtn {
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .countryDropdown {
+    width: 360px;
+    max-height: 320px;
+  }
+
+  .socialBtn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .error-msg,
+  .phoneError {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1440px) {
+  .pageContainer {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .leftTextContainer {
+    left: 8%;
+    top: 10%;
+  }
+
+  .leftTextContainer h1 {
+    font-size: 48px;
+  }
+
+  .leftTextContainer p {
+    font-size: 24px;
+  }
+
+  .formContainer {
+    max-width: 520px;
+  }
+
+  .formTitle {
+    font-size: 32px;
+  }
+}
 /* Laptop */
 @media screen and (max-width: 992px) {
 
@@ -302,6 +383,56 @@
 
   .rightPanel {
     padding: 30px 25px;
+  }
+}
+@media (max-width: 1024px) {
+  .pageContainer {
+    gap: 20px;
+  }
+
+  .rightPanel {
+    padding: 30px 24px;
+  }
+
+  .formContainer {
+    max-width: 430px;
+  }
+
+  .leftTextContainer {
+    top: 8%;
+    left: 6%;
+  }
+
+  .leftTextContainer h1 {
+    font-size: 34px;
+  }
+
+  .leftTextContainer p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .pageContainer {
+    flex-direction: column;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .leftPanel {
+    display: none;
+  }
+
+  .rightPanel {
+    width: 100%;
+    padding: 24px 20px;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .formContainer {
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
   }
 }
 
@@ -352,8 +483,81 @@
     max-width: 280px;
   }
 }
-/* Mobile */
+@media (max-width: 425px) {
+  .rightPanel {
+    padding: 18px 14px;
+  }
 
+  .formTitle {
+    font-size: 20px;
+  }
+
+  .countryDropdown {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .continue-text,
+  .error-msg {
+    font-size: 12px;
+  }
+
+  .socialBtn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 320px) {
+  .rightPanel {
+    padding: 15px 10px;
+  }
+
+  .formTitle {
+    font-size: 18px;
+  }
+
+  .fieldWrapper {
+    margin-bottom: 14px;
+  }
+
+  .fieldLabel {
+    font-size: 12px;
+  }
+
+  .inputField,
+  .phoneInput,
+  .countrySelector,
+  .submitBtn {
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .countrySelector {
+    padding: 0 10px;
+    gap: 2px;
+  }
+
+  .countryDropdown {
+    max-width: 220px;
+  }
+
+  .continue-text,
+  .error-msg,
+  .phoneError {
+    font-size: 11px;
+  }
+
+  .socialContainer {
+    gap: 10px;
+  }
+
+  .socialBtn {
+    width: 34px;
+    height: 34px;
+  }
+}
 
 /* Input Error */
 .input-error {

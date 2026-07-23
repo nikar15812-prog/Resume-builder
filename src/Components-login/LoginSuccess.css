@@ -193,8 +193,22 @@ body {
 /* Mobile */
 
 @media (max-width: 768px) {
-  .ls-login-image {
+   .ls-success-container {
+    padding: 24px 20px;
+  }
+
+  .ls-success-card {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .ls-image-section {
     display: none;
+  }
+
+  .ls-content-section {
+    width: 100%;
+    max-width: 500px;
   }
 }
 
@@ -249,13 +263,96 @@ body {
     font-size: 13px;
   }
 }
+@media (max-width: 425px) {
+  .ls-success-container {
+    padding: 18px 14px;
+  }
 
-.recruiter-btn {
-  background: #fff;
-  color: #555;
+  .ls-success-icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .ls-success-image {
+    width: 54px;
+    height: 54px;
+  }
+
+  .ls-content-section h1 {
+    font-size: 22px;
+  }
+
+  .ls-content-section h2 {
+    font-size: 16px;
+  }
+
+  .ls-security-icon-box {
+    width: 48px;
+    height: 48px;
+  }
+
+  .ls-security-image {
+    width: 38px;
+    height: 38px;
+  }
+  @media (max-width: 320px) {
+  .ls-success-container {
+    padding: 15px 10px;
+  }
+
+  .ls-success-card {
+    gap: 20px;
+  }
+
+  .ls-success-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .ls-success-image {
+    width: 46px;
+    height: 46px;
+  }
+
+  .ls-content-section h1 {
+    font-size: 20px;
+  }
+
+  .ls-content-section h2 {
+    font-size: 15px;
+  }
+
+  .ls-subtitle {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .ls-security-card {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .ls-security-icon-box {
+    width: 44px;
+    height: 44px;
+  }
+
+  .ls-security-image {
+    width: 34px;
+    height: 34px;
+  }
+
+  .ls-security-image-inner {
+    width: 18px;
+    height: 18px;
+  }
+
+  .ls-security-info h3 {
+    font-size: 14px;
+  }
+
+  .ls-security-info p {
+    font-size: 12px;
+  }
 }
-
-.recruiter-btn:hover {
-  background: #fff;
-  color: #555;
 }
